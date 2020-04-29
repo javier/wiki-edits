@@ -24,7 +24,7 @@ public class WikipediaAnalysis {
     static Logger LOG = LoggerFactory.getLogger(WikipediaAnalysis.class);
 
     public static void main(String[] args) throws Exception {
-        LOG.warn("execution started XXX");
+        LOG.debug("execution started XXX");
 
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         Map<String, Properties> applicationPropertiesMap;
@@ -63,14 +63,11 @@ public class WikipediaAnalysis {
                     }
                 });
 
-
-        result.print();
         result
                 .map(new MapFunction<Tuple2<String,Long>, String>() {
                     @Override
                     public String map(Tuple2<String, Long> tuple) {
-                        LOG.info("XXXX  Topic {} and list {}", kafkaSinkTopic, kafkaSinkBrokerList);
-                        LOG.info("result: {}", tuple.toString());
+                        LOG.debug("result: {}", tuple.toString());
                         return tuple.toString();
                     }
                 })
