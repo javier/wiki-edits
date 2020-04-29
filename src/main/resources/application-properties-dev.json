@@ -1,0 +1,18 @@
+[
+  {
+    "PropertyGroupId": "KafkaSink",
+    "PropertyMap": {
+      "brokerList": "localhost:9092",
+      "topic": "wiki-result",
+      "raw-topic": "wiki-results"
+    }
+  },
+  {
+    "PropertyGroupId": "KafkaSource",
+    "PropertyMap": {
+      "bootstrap.servers": "localhost:9092",
+      "zookeeper.connect": "localhost:2181",
+      "topic": "wiki-results"
+    }
+  }
+]
