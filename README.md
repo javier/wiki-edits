@@ -4,6 +4,8 @@ __This code is heavily based in the monitoring wikipedia tutorial at__ https://c
 
 It also got a lot of good ideas from https://github.com/arjunsk/flink-kinesis-data-analytics-sample  (Thank you, Arjun)
 
+There is a video (in Spanish) where you can watch an intro to Kafka and Flink, and a 20-minutes demo of this code https://www.youtube.com/watch?v=46ZISaEeCWs&feature=youtu.be
+
 ## Requirements
 
 You are going to need Java 8 and Maven to run this project. Also, you need a network that can connect to IRC default port (6667). Some corporate networks block access, so be aware!
